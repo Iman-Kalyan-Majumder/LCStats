@@ -1,0 +1,181 @@
+body
+{
+  margin:0;
+  width:100vw;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: black;
+  overflow-x: hidden;
+}
+header
+{
+  width:100vw;
+  text-align: center;
+  font-size:3.1vw;
+  padding:2vw;
+  color:white
+}
+button
+{
+  margin-left:1vw;
+  background-image:linear-gradient(to bottom right,darkblue,blue);
+  border-width:0px;
+  font-weight: 500;
+  color:white;
+  font-size: 1.5vw;
+  width:10vw;
+  height:100%;
+  padding: 1vw;
+}
+button:hover
+{
+  cursor:pointer;
+  background-image:linear-gradient(to bottom right,blue,darkblue);
+}
+#root
+{
+  margin-top: 1vw;
+  width:100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+input
+{
+  width:33vw;
+  height:100%;
+  font-size: 1.5vw;
+  padding: 1vw;
+  border-width: 0;
+}
+input:focus,textarea
+{
+  outline: 0.1em silver !important;
+}
+#checker
+{
+  width:100%;
+  text-align: center;
+  visibility: hidden;
+  color:beige;
+  font-size: 1.5vw;
+}
+#data>.square>#totalSolved,#easy,#medium,#hard
+{
+  color: aliceblue;
+  font-size: 2vw;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+#data>.square>h1
+{
+  color:aliceblue;
+  width: 100%;
+  text-align: center;
+  margin-top:2.5vw;
+  font-size: 2vw;
+}
+#data
+{
+  display:none;
+  margin-top: 4vw;
+  color:white;
+  width: 100vw;
+  display: none;
+}
+.square
+{
+  width:20%;
+  padding: 0;
+  height:12vw;
+}
+#ts
+{
+  border:0.1em solid white;
+  background-color: rgba(255,255,255,0.103);
+}
+#te
+{
+  border:0.1em solid rgb(0,255,0);
+  background-color: rgba(0, 255, 0, 0.103);
+}
+#tm
+{
+  border:0.1em solid rgb(255, 217, 0);
+  background-color: rgba(255, 217, 0, 0.103);
+}
+#tr
+{
+  border:0.1em solid rgb(255,0, 0);
+  background-color: rgba(255, 0, 0, 0.103);
+}
+footer
+{
+  position: fixed;
+  bottom:0;
+  padding:1vw;
+  font-size: 1.5vw;
+  width:100%;
+  text-align: center;
+  color:black;
+  background-color: white;
+}
+@media screen and (max-width: 500px)
+{
+  header
+  {
+    font-size:10vw;
+    padding: 3vw;
+    margin:3vw 0;
+  }
+  #root
+  {
+    width:100%;
+  }
+  input
+  {
+    width:55vw;
+    height:100%;
+    font-size: 5vw;
+    padding:3vw;
+  }
+  button
+  {
+    width:20vw;
+    height:100%;
+    font-size: 5vw;
+    padding:3vw;
+  }
+  #checker
+  {
+    margin-top: 5vw;
+    font-size: 5vw; 
+  }
+  #data
+  {
+    margin-top: 5vw;
+  }
+  .square
+  {
+    width:80vw;
+    height: auto;
+    margin-bottom: 10vw;
+  }
+  #data>.square>#totalSolved,#easy,#medium,#hard
+  {
+    font-size: 10vw;
+    margin-bottom:10vw;
+  }
+  #data>.square>h1
+  {
+    margin-top: 10vw;
+    font-size: 10vw;
+  }
+  footer
+  {
+    font-size: 5vw;
+  }
+}
