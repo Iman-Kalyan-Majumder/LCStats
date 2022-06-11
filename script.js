@@ -1,5 +1,6 @@
 async function get()
 {
+    document.getElementById('data').style.display='none';
     let user=document.getElementById('enter').value;
     if(user==="")
     {
@@ -8,7 +9,6 @@ async function get()
     }
     else
     {
-        document.getElementById('data').style.display='none';
         document.getElementById('checker').style.visibility='visible';
         document.getElementById('checker').innerHTML='Loading...';
         let link="https://leetcode-stats-api.herokuapp.com/"+user;
