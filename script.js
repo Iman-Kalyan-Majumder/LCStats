@@ -4,7 +4,7 @@ async function get()
     let user=document.getElementById('enter').value;
     if(user==="")
     {
-        document.getElementById('checker').style.visibility='visible';
+        document.getElementById('checker').style.display='block';
         document.getElementById('checker').innerHTML='Please enter a username...';
     }
     else
