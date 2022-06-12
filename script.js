@@ -9,7 +9,7 @@ async function get()
     }
     else
     {
-        document.getElementById('checker').style.visibility='visible';
+        document.getElementById('checker').style.display='block';
         document.getElementById('checker').innerHTML='Loading...';
         let link="https://leetcode-stats-api.herokuapp.com/"+user;
         let data=await fetch(link);
@@ -18,11 +18,13 @@ async function get()
         console.log(msg);
         if(msg==="success")
         {  
-            document.getElementById('checker').style.visibility='hidden';
+            document.getElementById('checker').style.display='none';
             document.getElementById('totalSolved').innerHTML=res.totalSolved.toString();
             document.getElementById('easy').innerHTML=res.easySolved.toString();
             document.getElementById('medium').innerHTML=res.mediumSolved.toString();
             document.getElementById('hard').innerHTML=res.hardSolved.toString();
+            document.getElementById('rate').innerHTML=res.acceptanceRate.toString()+"%";
+            document.getElementById('rank').innerHTML=res.ranking.toString()
             document.getElementById('data').style.display='flex';
             document.getElementById('data').style.alignItems='center';
             document.getElementById('data').style.justifyContent='space-evenly';
